@@ -1,0 +1,54 @@
+{
+  "0": {
+    "name": "null",
+    "desc": "This item doesn't exist.",
+    "plural": "null",
+    "isFood": true,
+    "onEat": "I eat the ba`NaN`a. I feel odd now, as if I'm stuck to the floor.",
+    "onEatEvent": 1
+  },
+  "1": {
+    "name": "cake",
+    "desc": "So delicious and moist.",
+    "plural": "cakes",
+    "isFood": true,
+    "onEat": "What cake?",
+    "onEatEvent": 0
+  },
+  "2": {
+    "name": "lantern",
+    "desc": "It's a lantern. I hope it doesn't run out of fuel.",
+    "plural": "lanterns",
+    "canActivate": true,
+    "onUseEvent": 2,
+    "onActivate": "I light the lantern.",
+    "onDeactivate": "I extinguish the lantern."
+  },
+  "3": {
+    "name": "hairpin",
+    "desc": "Maybe I can pick a lock with this?",
+    "plural": "hairpins"
+  },
+  "4": {
+    "name": "butter knife",
+    "desc": "A knife for cutting butter.",
+    "plural": "butter knives",
+    "canEquip": true
+  },
+  "5": {
+    "name": "cookie",
+    "desc": "A delicious cookie. :cookie:",
+    "plural": "cookies",
+    "isFood": true,
+    "onEat": "I ate a cookie. It was delicious. :cookie:",
+    "onEatEvent": 0
+  },
+  "6": {
+    "name": "cake",
+    "desc": "So delicious and moist.",
+    "plural": "cakes",
+    "isFood": true,
+    "onEat": "What cake? All I have is this key.",
+    "onEatEvent": 5
+  }
+}

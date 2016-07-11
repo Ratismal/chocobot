@@ -1,0 +1,141 @@
+{
+  "0": {
+    "name": "Dark Room",
+    "lit": false,
+    "desc": {
+      "0": "I'm free, but it's still to dark to see anything. Maybe if I turned on that `lantern`?",
+      "1": "I am in an small room.",
+      "2": "I'm in a dark room. I am covered in `chains` fastened by a large `lock`. I can barely see 5 feet in front of me. I can make out the shape of a small `lantern` on the ground beside me, but it's just out of reach."
+    },
+    "items": {
+      "2": {
+        "quantity": 1,
+        "active": false,
+        "onTakeEvent": 4,
+        "onTakeFail": "The lantern is just out of reach.",
+        "canseeunlit": false
+      },
+      "3": {
+        "quantity": 1,
+        "flagsRequired": {},
+        "desc": "There's a `hairpin` next to me.",
+        "canseeunlit": true
+      }
+    },
+    "structs": {
+      "chains": {
+        "desc": "These chains are bolted to the wall. They may be a bit rusty, but they sure are sturdy."
+      },
+      "lock": {
+        "desc": "This lock looks rather simple to pick.",
+        "item": 3,
+        "triggered": false,
+        "onUseEvent": 3,
+        "onUse": "I pick the lock and the chains fall away from me. The hairpin break in the lock.",
+        "onUseFail": "I don't think that will work.",
+        "onUseTriggered": "There is already a hairpin stuck in the lock.",
+        "resultFlags": {
+          "0": false
+        },
+        "destroyItem": true
+      }
+    },
+    "paths": {
+      "s": {
+        "desc": "There's an old-looking door to the south of the room, but other than that it's pretty barren.",
+        "dest": 1,
+        "flagsRequired": {},
+        "onGo": "I tentatively open the door and walk through."
+      }
+    }
+  },
+  "1": {
+    "name": "hallway",
+    "lit": false,
+    "desc": {
+      "0": "It's too dark to see anything.",
+      "1": "It's a long hallway. On the wall are some `paintings`."
+    },
+    "items": {
+      "4": {
+        "quantity": 1,
+        "active": false,
+        "desc": "A `butter knife` lies on a small `table` to the side."
+      }
+    },
+    "structs": {
+      "paintings": {
+        "desc": "A number of portraits line the walls. I can't make out any faces on them."
+      },
+      "table": {
+        "desc": "A small wooden table sits against the wall."
+      }
+    },
+    "paths": {
+      "n": {
+        "desc": "An old-looking door leads to the north.",
+        "dest": 0,
+        "flagsRequired": {},
+        "onGo": "I walk through the door back to where I first started."
+      },
+      "e": {
+        "desc": "I can see a door on the east side of the hallway, and",
+        "dest": 2,
+        "flagsRequired": {},
+        "onGo": "I enter the eastern door."
+      },
+      "s": {
+        "desc": "there's an imposing door at the south end.",
+        "dest": 3,
+        "flagsRequired": {
+          "1": [
+            true,
+            "The door is locked! I need to find a key."
+          ]
+        },
+        "onGo": "I push the door open and boldly walk into the room."
+      }
+    }
+  },
+  "2": {
+    "name": "cake room",
+    "lit": false,
+    "desc": {
+      "0": "It's too dark to see anything.",
+      "1": "I'm in a round room. There is a small stone `pedestal` in the centre of it. There are doors in each of the cardinal directions."
+    },
+    "items": {
+      "1": {
+        "quantity": 1,
+        "desc": "A `cake` sits on top of the `pedestal`."
+      }
+    },
+    "structs": {
+      "pedestal": {
+        "desc": "It's a small round table made of marble."
+      }
+    },
+    "paths": {
+      "n": {
+        "dest": 4,
+        "flagsRequired": {},
+        "onGo": "I walk through the northern door."
+      },
+      "s": {
+        "dest": 5,
+        "flagsRequired": {},
+        "onGo": "I walk through the southern door."
+      },
+      "e": {
+        "dest": 6,
+        "flagsRequired": {},
+        "onGo": "I walk through the eastern door."
+      },
+      "w": {
+        "dest": 1,
+        "flagsRequired": {},
+        "onGo": "I walk through the western door."
+      }
+    }
+  }
+}

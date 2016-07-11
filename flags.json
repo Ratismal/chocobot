@@ -1,0 +1,21 @@
+{
+  "0": {
+    "name": "canmove",
+    "desc": "a collection of movement statuses",
+    "1": "I'm chained up and can't move.",
+    "2": "I'm stuck to the floor."
+  },
+  "1": {
+    "name": "boss door",
+    "desc": "true if unlocked"
+  },
+  "2": {
+    "name": "test flag",
+    "desc": "kek"
+  },
+  "99": {
+    "name": "health",
+    "0": "current",
+    "1": "max"
+  }
+}

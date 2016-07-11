@@ -1,0 +1,8 @@
+logs/*
+node_modules/*
+userdata/*
+.idea/*
+config.json
+servers.json
+chocovars.json
+checkpoints/*
